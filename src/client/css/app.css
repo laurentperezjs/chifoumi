@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?7pfqjq');
+    src:    url('fonts/icomoon.eot?7pfqjq#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?7pfqjq') format('truetype'),
+        url('fonts/icomoon.woff?7pfqjq') format('woff'),
+        url('fonts/icomoon.svg?7pfqjq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	margin: 0;
+	    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+.icon:before {
+    margin-right: 1em;
+}
+.lizard:before {
+    content: "\e900";
+    color: gainsboro;
+}
+.paper:before {
+    content: "\e903";
+    color: antiquewhite;
+}
+.rock:before {
+    content: "\e904";
+    color: dimgray;
+}
+.spock:before {
+    content: "\e926";
+    color: black;
+}
+.scissors:before {
+    content: "\e925";
+    color: darkgray;
+}
+/* eof fonts */
+
+.logo {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+}
+.choice {
+	color: blue;
+	cursor: pointer;
+	padding: 20px;
+	text-align: center;
+}
+.playerChoice {
+	background-color: antiquewhite;
+	color: chocolate;
+	text-align: center;
+	padding: 10px;
+}
+.playButton {
+	display: block;
+	margin: 0 auto;
+}
+#result {
+	color: red;
+	text-align: center;
+	font-size: 26px;
+	padding: 10px;
+	background-color: darkblue;
+    transition: opacity 3s;
+}
+
+#result.shown{
+    opacity: 1;
+}
+
+#result.hidden{
+    opacity: 0;
+}

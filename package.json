@@ -1,0 +1,38 @@
+{
+  "name": "chifoumi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
+    "build": "NODE_ENV=production webpack -p --config webpack.config.js",
+    "dev": "DEBUG=express:* node src/client/main.js & webpack -d --watch --config webpack.config-dev.js",
+    "fg": "DEBUG=express:* node --debug src/client/main.js & webpack -d --watch --config webpack.config-dev.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.6.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-function-bind": "^6.5.2",
+    "babel-polyfill": "6.6.1",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.6.0",
+    "flux": "^2.0.0",
+    "keymirror": "^0.1.1",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "react": "^0.14.7",
+    "react-addons-create-fragment": "^0.14.7",
+    "react-addons-css-transition-group": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "node-fetch": "^1.3.3",
+    "whatwg-fetch": "^0.11.0"
+  }
+}
