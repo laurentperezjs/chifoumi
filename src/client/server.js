@@ -7,7 +7,7 @@ import Home from './app/Home.jsx';
 const app = express();
 
 const port = process.env.PORT || 3000;
-//const data = {word: 'Hello'};
+const data = {word: 'Hello'};
 
 const fetch = require('node-fetch');
 function getData() {
@@ -37,13 +37,12 @@ app.use('/index.html', (req, res) => {
             return response.json()
         }).then(function (json) {
         console.log('fetch parsed json' + json);
-        const reactHtml = ReactDOMServer.renderToString(GameFactory(json));
-        debugger;
-        res.render('index.ejs', {reactOutput: reactHtml});
     }).catch(function (ex) {
         console.error('fetch parsing failed', ex)
         return "parsing failed";
     })
+    const reactHtml = ReactDOMServer.renderToString(GameFactory(data));
+    res.render('index.ejs', {reactOutput: reactHtml});
 });
 app.use('/', express.static(`${__dirname}`));
 //  app.use('/', (req, res)=> res.json(data));
